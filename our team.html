@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Our Team</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+	<style type="text/css">
+	body{
+		background-image:linear-gradient(yellow,white);
+		font-family: 'Roboto Slab', serif;
+	}
+	.aditya{
+		position: relative;
+		left: 60vh;
+		top:15vh;
+		color: transparent;
+		width: 200px;
+		height: 200px;
+	}
+		.aditya .adi1{
+	height: 200px;
+    width: 200px;
+    border-radius: 50%;
+		}
+
+		.trishanku{
+		position: relative;
+		left: 120vh;
+		top:-15vh;
+		color: transparent;
+		width: 200px;
+		height: 200px;
+		border-radius:50%; 
+	}
+
+		.trishanku .tri{
+	height: 200px;
+    width: 200px;
+    border-radius: 50%;
+		}
+		.partha{
+		position: relative;
+		left: 92vh;
+		top:-5vh;
+		color: transparent;
+		width: 200px;
+		height: 200px;
+
+	}
+
+		.partha .par{
+	height: 200px;
+    width: 200px;
+    border-radius: 50%;
+		}
+		.aditya p{
+			position: absolute;
+			left:7vh;
+			top: 10vh; 
+			text-align: center;
+			
+		}
+		.trishanku p{
+			position: absolute;
+			left:4vh;
+			top: 10vh; 
+			text-align: center;
+		}
+		.partha p{
+			position: absolute;
+			left:1vh;
+			top: 10vh; 
+			text-align: center;
+		}
+		.aditya:hover{
+			color:white;
+		}
+		/*.aditya:hover  img{
+			opacity: 0.9;
+			cursor: pointer; 
+		}*/
+		.trishanku:hover{
+			color:black;
+		}
+		.partha:hover{
+			color:white;
+		}
+		#adi{
+			position: absolute;
+			top:140px;
+			left:73px;
+			height: 50px;
+			width: 50px;
+			display:none;
+		}
+		#tri{
+			position: absolute;
+			top:140px;
+			left:73px;
+			height: 50px;
+			width: 50px;
+			display:none;
+		}
+		#par{
+		position: absolute;
+			top:140px;
+			left:73px;
+			height: 50px;
+			width: 50px;
+			display:none;	
+		}
+		.button{
+			position: absolute;
+			top:-60vh;
+			left:47.5vw;
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">Our Team</h1>
+<div class="aditya" onmouseover="adi()" onmouseout="adi2()"><div class="text1">
+	<p>Aditya Bhura</p>
+	<a href="www.google.com"><img src="images/facebook.png" id="adi"></a>
+	</div>
+	<img src="images/aditya.jpg" class="adi1">
+	
+</div>
+<div class="trishanku" class="aditya" onmouseover="tri()" onmouseout="tri2()">
+	<img src="images/trishanku.jpg" class="tri">
+	<p>Trishanku Sharma</p>
+	<a href="www.google.com"><img src="images/facebook.png" id="tri"></a>
+</div>
+<div class="partha" onmouseover="par()" onmouseout="par2()">
+	<img src="images/partha.jpg" class="par">
+	<p>Partha Pratim Choudhary</p>
+	<a href="www.google.com"><img src="images/facebook.png" id="par"></a>
+</div>
+       <div class="button"><button onclick="window.location.href='homepage.html'" style="position:absolute;top:500px;"><a href="#">HOME</a>
+       </button></div>
+</body>
+<script type="text/javascript">
+	function adi(){
+	document.getElementById("adi").style.display="block";}
+	function adi2(){
+	document.getElementById("adi").style.display="none";}
+	function tri(){
+	document.getElementById("tri").style.display="block";}
+	function tri2(){
+	document.getElementById("tri").style.display="none";}
+	function par(){
+	document.getElementById("par").style.display="block";}
+	function par2(){
+	document.getElementById("par").style.display="none";}
+</script>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OUR HACKATHON MODEL</title>
+    <style type="text/css">
+    	#container{
+    	   height:100vh;
+    	   width:100vw;
+    	   position:relative;
+       	}
+    	body,div{
+    		padding:0;
+    		margin:0;
+    		background: #0F2027; 
+background:linear-gradient(to right, #2C5364, #A8CABA, #0F2027); 
+    		text-align:center;
+    		display:flex;
+    		font-family:serif;
+    	}
+        .div{
+        	opacity:1;
+        	height:65px;
+        	width:75px;
+        	border-radius:20%;
+        	padding-top:5px;
+        		background-image: radial-gradient(#AED2FE,black);
+        	color:#450E16;
+        	font-size:200%;
+        	border:1px black solid;
+        	font-weight:bold;
+        	float:left;
+        	display:block;
+        	position:relative;
+        	margin:8px;
+        	animation:division 2s ease-in-out;
+        	animation-fill-mode:forwards;
+        	box-shadow:5px 10px #888888;
+        }
+        @keyframes division{
+        	100%{transform:translate(300px,300px);}
+        	75%{transform:rotate(90deg);}
+        	50%{transform:translateY(600px);}
+        	25%{transform:rotate(90deg);}
+        }
+        .C{animation-delay:0s;}
+        .Y{animation-delay:2s;}
+        .Bi{animation-delay:3s;}
+        .E{animation-delay:4s;}
+        .R{animation-delay:5s;}
+        .Bo{animation-delay:6s;}
+        .O{animation-delay:7s;}
+        .T{animation-delay:8s;}
+        .three{animation-delay:9s;}
+        #enter{
+        	position:relative;
+        	top:500px;
+        	background-color:#77ff00;
+        	font-size:200%;
+        }
+    </style>
+</head>
+<body>
+   <div id="container">
+   	  <div class="div C">E</div>
+   	  <div class="div Y">L</div>
+   	  <div class="div Bi">E</div>
+   	  <div class="div E">C</div>
+   	  <div class="div R">T</div>
+   	  <div class="div Bo">R</div>
+   	  <div class="div O">O</div>
+   	  <div class="div T">N0</div>
+   	  <div class="div three">0B</div> 
+     <button id="enter">WELCOME TO OUR HOMEPAGE</button>
+   </div>
+    <script type="text/javascript">
+      var timer=setTimeout(function(){
+        window.location.href='homepage.html'
+      },14000);
+     var div=document.getElementsByClassName("div");
+   	for(var i=0;i<div.length;i++){
+      div[i].addEventListener("click", function(){
+        this.style.height=75+"px";
+        this.style.width=85+"px";
+      });
+   	}
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>my navigation bar</title>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+  <style type="text/css">
+    *{
+      margin:0;
+      padding:0;
+    }
+    body{
+      font-family: 'Fira Sans', sans-serif;
+      display:space-between;
+    }
+    .nav{
+      background: #00B4DB;
+background: linear-gradient(to right, #0083B0, #00B4DB); 
+
+      justify-content:space-between;
+      height:83px;
+      width:100%;
+      font-weight:bold;
+      display:flex;
+    }
+    .brandname{
+      color:#660000;
+      padding:15px 65px;
+      font-size:250%;
+    }
+        .navlinks{
+          position:relative;
+        }
+    .navlinks li{
+      list-style:none; 
+      float:left;
+      font-size:125%;
+    }
+    .navlinks li a:hover{
+      background-color:#ffcccc;
+      color:#660000;
+    }
+    #bekaar{
+      background-color:#DF0101;
+      height:70px;
+      width:100%;
+      text-align:right;
+      color:white;
+      font-size:70%;
+      cursor:pointer;
+    }
+        .navlinks li a{
+          text-decoration:none;
+          color:white;
+            padding:25px;
+            position:relative;
+            top:35px;
+       }
+       #bekaar a{
+          text-decoration:none;
+          color:white;
+            padding:35px;
+            position:relative;
+            top:5px;
+       }
+       #toogle{
+        width:21px;
+        height:25px;
+        display:flex;
+        justify-content:space-between;
+        flex-direction: column;
+       position:absolute;
+       top:40px;
+       left:10px;
+       }
+       #toogle .bar{
+       width:100%;
+       height:3px;
+       background-color:white;
+       }
+       #view{
+        height:370px;
+        width:212px;
+        background: #a8c0ff;
+background: linear-gradient(to bottom, #3f2b96, #a8c0ff);
+
+        display:none;
+        animation:view 0.5s ease-in;
+        flex-direction:column;
+        justify-content:space-around;
+        text-align:center;
+        overflow:hidden;
+        float:left;
+       }
+
+       #view li{
+        list-style:none;
+        padding-bottom:55px;
+        padding-top:50px;
+        font-weight:bold;
+        color:white;
+       }
+       @keyframes view{
+        100%{width:200px; height:370px}
+        0%{width:0%; height:370px;}
+       }
+       .viewul li a:hover{
+        background-color:#ffcccc;
+      color:#660000;
+       }
+       .viewul li a{
+        text-decoration:none;
+        color:white;
+        font-weight:bold;
+        padding:50px;
+       }
+       #home{
+        position:absolute;
+        z-index:-1;
+        text-align:center;
+        font-size:150%;
+        display:flex;
+        float:left;
+        padding:25px;
+        background-color:white;
+       }
+  </style>
+</head>
+<body>
+  <div id="bekaar"><a href="#">ANY HELP?</a></div>
+    <nav class="nav">
+      <a href="#" id="toogle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </a>
+      </span>
+      <div class="brandname">ELECTRONOOBS</div>
+      <ul class="navlinks">
+        <li id="HOME" ><a href="#">HOME</a></li>
+        <li id="SUPPORT" onclick="window.location.href='support.html'"><a href="#">SUPPORT</a></li>
+        <li id="ABOUT"onclick="window.location.href='aboutus.html'"><a href="#">ABOUT US</a></li>
+        <li id="CONTACT"><a href="#">CONTACT US</a></li>
+        </ul>
+    </div>
+</nav>
+    <div id="view">
+      <ul class="viewul">
+        <li><a href="#">CENTRES</a></li>
+        <li onclick="window.location.href='product.html'"><a href="#">PRODUCTS</a></li>
+        <li onclick="window.location.href='our team.html'"><a href="#">MEET_TEAM</a></li>
+        <li></li>  
+      </ul>
+    </div>
+    <div  id="home">
+       <h2>SIMPLE CLEVER DISRUPTIVE<span style="color:green">(AUTONOMOUS ROBOT FOR KNOWN ENVIRONMENT)</span></h2>
+        <div class="blackhome style="color:black">
+           Welcome to the future of Retail & Intelligent Warehousing!
+           Introducing Electronoobs ,One of the world's most advanced and efficient Automatic storage and retrival automatic storage and retrieval system! This cutting edge Robotic Technology is currently offered to customers in indian Market to Industry segments such as E-commerce , Automatic and Legitives.
+          </br></br>
+          Gain significant advantage over conventional automatic storage and retrieval systems (ASRS) in terms of reducing labour intensive manpower ,accuracy and faster pick rates .The product is worldwide patient pending and is all set to revolunize the industry in 2016;
+          </br></br>
+          <span style="color:red">
+            Myth that Robots are still expensive!</br>
+            Inventory Vs MarketPlace MOdel-VCCircle!</br>
+          </span>
+        </div>
+    </div>
+    <script type="text/javascript">
+      var toogle=document.getElementById("toogle");
+      var view=document.getElementById("view");
+      toogle.addEventListener("click",function setnav(){
+      if(view.style.display==="block"){
+        view.style.display="none";
+       document.getElementById("home").style.marginLeft=50+"px";
+   }   else{
+        view.style.display="block";
+        document.getElementById("home").style.marginLeft=210+"px";
+    }
+        });
+    function getrandomcolor(){
+      var letters = '0123456789ABCDEF'.split(''); 
+      var color='#';
+      for(var i=0;i<6;i++)
+      {
+        color+=letters[Math.round(Math.random()*15)];
+      }
+      return color;
+    }
+    setInterval(function(){
+        document.getElementById("bekaar").style.backgroundColor=getrandomcolor();
+        document.getElementById("")
+    },2000)
+    </script>
+</body>
+</html>
